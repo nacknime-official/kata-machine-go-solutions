@@ -1,4 +1,4 @@
-# Kata Machine (Go) 
+# Kata Machine (Go)
 [ThePrimeagen's kata machine](https://github.com/ThePrimeagen/kata-machine) for **CHAD** gophers.
 
 ## How it works
@@ -41,6 +41,8 @@ src/day2
 
 that will contain files with empty kata implementation and files with tests for it.
 
+BTW there is `src/DSA/helpers.go` file with some common functions/structs (e.g. `ZeroValue`), you can use them if you want to.
+
 ## Testing
 Just run `go test ./...` within a day folder if you want to run all the tests for a day.
 
@@ -48,9 +50,42 @@ Or `go test ./QuickSort` within a day folder if you want to run only *QuickSort*
 
 Check `go help test` for more details.
 
-Soon I will make `go run main.go test` command soon that will automatically runs all the tests for the current day or that you have specified in the arguments.
+There is also `test` command you can use from the root folder:
+```bash
+go run main.go test             # runs all the tests for current day
+go run main.go test -day 1      # runs all the tests for day 1
+go run main.go test Queue       # runs Queue test for current day
+go run main.go test Queue Stack # runs Queue and Stack tests for current day
+go run main.go test Queue -v    # runs Queue test for current day with verbose output
+go run main.go test -- -v       # runs all the tests for current day with verbose output
+```
 
 ## TODO
 - [ ] Add other DSA
-- [ ] "test" command
+    - [x] LinearSearchList
+    - [x] BubbleSort
+    - [x] SinglyLinkedList
+    - [x] DoublyLinkedList
+    - [x] Queue
+    - [x] Stack
+    - [x] ArrayList
+    - [x] QuickSort
+    - [x] MergeSort
+    - [x] MinHeap
+    - [ ] DFSOnBST
+    - [ ] LRU
+    - [ ] BinarySearchList
+    - [ ] TwoCrystalBalls
+    - [ ] MazeSolver
+    - [ ] BTPreOrder
+    - [ ] BTInOrder
+    - [ ] BTPostOrder
+    - [ ] BTBFS
+    - [ ] CompareBinaryTrees
+    - [ ] DFSOnBST
+    - [ ] DFSGraphList
+    - [ ] Trie
+    - [ ] BFSGraphMatrix
+    - [ ] Map
+- [x] "test" command
 - [ ] Stats
